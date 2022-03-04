@@ -1,0 +1,849 @@
+Define LibPub mat() = Prgm
+Local keyword
+RequestStr "Pesquisar",keyword
+If keyword="perimetro" Then
+  Disp "Circuferência:"
+  Disp "2π*r"
+EndIf
+
+If keyword="area" Then
+  Disp "Triângulo: A=b*h/2"
+  Disp "Circuferência: π*r²"
+  Disp "Trapézio: (B+b)*h/2"
+  Disp "Losango: D*d/2"
+EndIf
+
+If keyword="volume" Then
+  Disp "Cilindro: π*r²*h"
+EndIf
+
+If keyword="circun" Then
+  Disp "Centro-> (a,b)"
+  Disp "(x-a)² + (y-b)² = r²"
+  Disp "(x-a)² + (y-b)² + (z-c)² = r²"
+EndIf
+
+If keyword="circulo" Then
+  Disp "Centro-> (a,b)"
+  Disp "(x-a)² + (y-b)² ≤ r²"
+  Disp "(x-a)² + (y-b)² + (z-c)² ≤ r²"
+EndIf
+
+If keyword="ponto medio" Then
+  Disp "Para P(x₁,y₁) e Q(x₂,y₂)"
+  Disp "(x₁+x₂/2,y₁+y₂/2)"
+EndIf
+
+If keyword="distancia pontos" Then
+  Disp "No plano:"
+  Disp "d(A,B)=√(x₂-x₁)²+(y₂-y₁)²"
+  Disp "No espaço:"
+  Disp "d(A,B)=√(x₂-x₁)²+(y₂-y₁)²+(z₂-z₁)²"
+EndIf
+
+If keyword="plano mediador" Then
+  Disp "No plano:"
+  Disp "(x-x₁)²+(y-y₁)²=(x-x₂)²+(y-y₂)²"
+  Disp "No espaço:"
+  Disp "(x-x₁)²+(y-y₁)²+(z-z₁)²=(x-x₂)²+(y-y₂)²+(z-z₂)²"
+EndIf
+
+If keyword="norma" Then
+  Disp "Para A(a,b) e B(c,d)"
+  Disp "||AB||=√(c-a)²+(d-b)²"
+EndIf
+
+If keyword="produto escalar" Then
+  Disp "Fórmula:"
+  Disp "u.v=||u||*||v||*cos(u^v)"
+  Disp "Com coordenadas:"
+  Disp "u*v = (a,b,c)*(d,e,f) = ad+be+cf"
+  Disp "AB⊥MP <-> AB*MP=0"
+EndIf
+
+If keyword="ang vet" Then
+  Disp "0° < u^v < 180°:"
+  Disp "cos(u^v) = u*v/||u||*||v||"
+  Disp "0° < r^s < 90°:"
+  Disp "cos(r^s) = ||r||*||s||/||u||*||v||"
+EndIf
+
+If keyword="declive" Then
+  Disp "m=tan(α)"
+  Disp "m=v₂/v₁ vetor->(v₁,v₂)"
+  Disp "m=lim x->±oo [f(x)/x]"
+  Disp "m=y₂-y₁/x₂-x₁"
+  Disp "r||s <-> mr=ms | r⊥s <-> mr*ms=-1"
+EndIf
+
+If keyword="reta" Then
+  Disp "Reduzida: y=mx+b"
+  Disp "Vetorial: (x,y)=(x1,y1)+k(v1,v2), k ∈ ℝ"
+  Disp "Cartesiana: (x-x1)/v1=(y-y1)/v2=(z-z1)/v3"
+  Disp "Equação cartesiana plano:"
+  Disp "β: ax+by+cz+d=0 com ⊥v(a,b,c)"
+EndIf
+
+If keyword="equacao elipse" Then
+  Disp "Centro (h,k)   Semi-eixos a/b"
+  Disp "((x-h)/a)² + ((y-k)/b)² = 1"
+EndIf
+
+If keyword="circ trig" Then
+  Disp "sen(π/6 = 30°)=1/2"
+  Disp "cos(π/6 = 30°)=√3/2"
+  Disp "tg(π/6 = 30°)=√3/3"
+  Disp "sen(π/4 = 45°)=√2/2"
+  Disp "cos(π/4 = 45°)=√2/2"
+  Disp "tg(π/4 = 45°)=1"
+  Disp "sen(π/3 = 60°)=√3/2"
+  Disp "cos(π/3 = 60°)=1/2"
+  Disp "tg(π/3 = 60°)=√3"
+EndIf
+
+If keyword="sin(π/6)" Then
+  Disp "sen(π/6 = 30°)=1/2"
+EndIf
+
+If keyword="sin(π/4)" Then
+  Disp "sen(π/4 = 45°)=√2/2"
+EndIf
+
+If keyword="sin(π/3)" Then
+  Disp "sen(π/3 = 60°)=√3/2"
+EndIf
+
+If keyword="cos(π/6)" Then
+  Disp "cos(π/6 = 30°)=√3/2"
+EndIf
+
+If keyword="cos(π/4)" Then
+  Disp "cos(π/4 = 45°)=√2/2"
+EndIf
+
+If keyword="cos(π/3)" Then
+  Disp "cos(π/3 = 60°)=1/2"
+EndIf
+
+If keyword="tan(π/6)" Then
+  Disp "tg(π/6 = 30°)=√3/3"
+EndIf
+
+If keyword="tan(π/4)" Then
+  Disp "tg(π/4 = 45°)=1"
+EndIf
+
+If keyword="tan(π/3)" Then
+  Disp "tg(π/3 = 60°)=√3"
+EndIf
+
+If keyword="-x" Then
+  Disp "-> (-α)"
+  Disp "sen(-α) = -sen(α)"
+  Disp "cos(-α) = cos(α)"
+  Disp "tg(-α) = -tg(α)"
+EndIf
+
+If keyword="π-x" Then
+  Disp "-> (π-α)"
+  Disp "sen(π-α) = sen(α)"
+  Disp "cos(π-α) = -cos(α)"
+  Disp "tg(π-α) = -tg(α)"
+EndIf
+
+If keyword="π+x" Then
+  Disp "-> (π+α)"
+  Disp "sen(π+α) = -sen(α)"
+  Disp "cos(π+α) = -cos(α)"
+  Disp "tg(π+α) = tg(α)"
+EndIf
+
+If keyword="π/2-x" Then
+  Disp "-> (π/2-α)"
+  Disp "sen(π/2-α) = cos(α)"
+  Disp "cos(π/2-α) = sen(α)"
+  Disp "tg(π/2-α) = cos(α)/sen(α)"
+EndIf
+
+If keyword="π/2+x" Then
+  Disp "-> (π/2+α)"
+  Disp "sen(π/2+α) = cos(α)"
+  Disp "cos(π/2+α) = -sen(α)"
+  Disp "tg(π/2+α) = cos(α)/-sen(α)"
+EndIf
+
+If keyword="3π/2-x" Then
+  Disp "-> (3π/2-α)"
+  Disp "sen(3π/2-α) = -cos(α)"
+  Disp "cos(3π/2-α) = -sen(α)"
+  Disp "tg(3π/2-α) = cos(α)/sen(α)"
+EndIf
+
+If keyword="3π/2+x" Then
+  Disp "-> (3π/2+α)"
+  Disp "sen(3π/2+α) = -cos(α)"
+  Disp "cos(3π/2+α) = sen(α)"
+  Disp "tg(3π/2+α) = -cos(α)/sen(α)"
+EndIf
+
+If keyword="-sin(x)" Then
+  Disp "sen(-α)"
+  Disp "sen(π+α)"
+  Disp "cos(π/2+α)"
+  Disp "cos(3π/2-α)"
+EndIf
+
+If keyword="sin(x)" Then
+  Disp "sen(π-α)"
+  Disp "cos(π/2-α)"
+  Disp "cos(3π/2+α)"
+EndIf
+
+If keyword="cos(x)" Then
+  Disp "cos(-α)"
+  Disp "sen(π/2-α)"
+  Disp "sen(π/2+α)"
+EndIf
+
+If keyword="-cos(x)" Then
+  Disp "cos(π-α)"
+  Disp "cos(π+α)"
+  Disp "sen(3π/2-α)"
+  Disp "sen(3π/2+α)"
+EndIf
+
+If keyword="tan(x)" Then
+  Disp "tg(π+α)"
+EndIf
+
+If keyword="-tan(x)" Then
+  Disp "tg(-α)"
+  Disp "tg(π-α)"
+EndIf
+
+If keyword="cos(x)/sin(x)" Then
+  Disp "tg(π/2-α)"
+  Disp "tg(3π/2-α)"
+EndIf
+
+If keyword="cos(x)/-sin(x)" Then
+  Disp "tg(π/2+α)"
+EndIf
+
+If keyword="-cos(x)/sin(x)" Then
+  Disp "tg(3π/2+α)"
+EndIf
+
+If keyword="leis" Then
+  Disp "Lei dos Senos"
+  Disp "sen(A)/a = sen(B)/b = sen(C)/c"
+  Disp "Lei dos Cossenos"
+  Disp "a²=b²+c²-2bc*cos(A)"
+EndIf
+
+If keyword="reducao" Then
+  Disp "-> (-α)"
+  Disp "sen(-α) = -sen(α)"
+  Disp "cos(-α) = cos(α)"
+  Disp "tg(-α) = -tg(α)"
+  Disp "-> (π-α)"
+  Disp "sen(π-α) = sen(α)"
+  Disp "cos(π-α) = -cos(α)"
+  Disp "tg(π-α) = -tg(α)"
+  Disp "-> (π+α)"
+  Disp "sen(π+α) = -sen(α)"
+  Disp "cos(π+α) = -cos(α)"
+  Disp "tg(π+α) = tg(α)"
+  Disp "-> (π/2-α)"
+  Disp "sen(π/2-α) = cos(α)"
+  Disp "cos(π/2-α) = sen(α)"
+  Disp "tg(π/2-α) = cos(α)/sen(α)"
+  Disp "-> (π/2+α)"
+  Disp "sen(π/2+α) = cos(α)"
+  Disp "cos(π/2+α) = -sen(α)"
+  Disp "tg(π/2+α) = cos(α)/-sen(α)"
+  Disp "-> (3π/2-α)"
+  Disp "sen(3π/2-α) = -cos(α)"
+  Disp "cos(3π/2-α) = -sen(α)"
+  Disp "tg(3π/2-α) = cos(α)/sen(α)"
+  Disp "-> (3π/2+α)"
+  Disp "sen(3π/2+α) = -cos(α)"
+  Disp "cos(3π/2+α) = sen(α)"
+  Disp "tg(3π/2+α) = -cos(α)/sen(α)"
+EndIf
+
+If keyword="equacao trig" Then
+  Disp "sin(x)=sin(α):"
+  Disp "x = α+2kπ ∨ x = π-α+2kπ, k∈ℤ"
+  Disp "cos(x)=cos(α):"
+  Disp "x = α+2kπ ∨ x = -α+2kπ, k∈ℤ"
+  Disp "tan(x)=tan(α):"
+  Disp "x = α+kπ, k∈ℤ"
+EndIf
+
+If keyword="form trig" Then
+  Disp "(sen(α))²+(cos(α))² = 1"
+  Disp "sen²(α)+cos²(α) = 1"
+  Disp "tg(α) = sen(α)/cos(α)"
+  Disp "tg²(α)+1 = 1/cos²(α)"
+  Disp "sen α = cos(π/2-α) / sen(α) = cos(90°-α)"
+  Disp "cos α = sen(π/2-α) / cos(α) = sen(90°-α)"
+  Disp "tg α = 1/tg(π/2-α) / tg(α) = 1/tg(90°-α)"
+  Disp "1/tg²α+1 = 1/sen²α"
+  Disp "sen(a+b) = sen(a)*cos(b) + sen(b)*cos(a)"
+  Disp "cos(a+b) = cos(a)*cos(b) - sen(a)*sen(b)"
+  Disp "tg(a+b) =(tg(a)+tg(b)) / (1-tg(a)*tg(b))"
+  Disp "sen(a-b) = sen(a)*cos(b) - sen(b)*cos(a)"
+  Disp "cos(a-b) = cos(a)*cos b + sen(a)*sen(b)"
+  Disp "tg(a-b) = (tg(a)-tg(b)) / (1+tg(a)*tg(b))"
+  Disp "sen(2α) = 2*sen(α)*cos(α)"
+  Disp "cos(2α) = cos²(α)-sen²(α)"
+  Disp "tg(2α) = 2*tg(α)/(1-tg²α)"
+EndIf
+
+If keyword="ruff" Then
+  Disp "A(x)=2x²+x-1 a dividir por x-1"
+  Disp "   | 2  1  -1"
+  Disp "1 |     2    3"
+  Disp "--------"
+  Disp "   | 2  3   |2   <- Resto"
+  Disp "O quociente é 2x+3"
+  Disp "O resto é 2"
+EndIf
+
+If keyword="paridade" Then
+  Disp "Função Par: f(x) = f(-x)"
+  Disp "Se uma função é par, o seu gráfico é simétrico relativamente ao eixo Oy."
+  Disp "Função Impar: f(-x) = -f(x)"
+  Disp "Se uma função é impar, o seu gráfico é simétrico relativamente à origem."
+EndIf
+
+If keyword="injetiva" Then
+  Disp "Função Injetiva: "
+  Disp "Para cada Y corresponde um e apenas um X"
+  Disp "Função Não Injetiva: "
+  Disp "Para cada Y pode corresponder mais do que um X"
+EndIf
+
+If keyword="euler" Then
+  Disp "F+V=A+2"
+  Disp "F: Nº Faces V: Nº Vertices A: Nº Arestas"
+EndIf
+
+If keyword="operacao funcoes" Then
+  Disp "f(x)=h(x)"
+  Disp "(f+h)(x)=f(x)+h(x)"
+  Disp "(f-h)(x)=f(x)-h(x)"
+  Disp "(f*h)(x)=f(x)*h(x)"
+  Disp "(f/h)(x)=f(x)/h(x)"
+  Disp "(f∘h)(x)=f[h(x)]"
+EndIf
+
+If keyword="log" Then
+  Disp "n^a = b <-> a = log(b)"
+  Disp "4⁵ = 1024"
+  Disp "5 = log₄(1024)"
+EndIf
+
+If keyword="prop log" Then
+  Disp "log(1) = 0 | log(n) = 1 | n^log(x) = x"
+  Disp "log(x^k) = k*log(x)"
+  Disp "log(A*B) = log(A)+log(B)"
+  Disp "log(A/B) = log(A)-log(B)"
+  Disp "log(x)=log₄(x)/log₄(n)"
+  Disp "log(4)*log₄(n)=1"
+EndIf
+
+If keyword="prop pot" Then
+  Disp "a⁴*a⁸ = a⁴⁺⁸ | a⁴/a⁸ = a⁴⁻⁸"
+  Disp "(a*b)ⁿ = aⁿxbⁿ"
+  Disp "(a/b)ⁿ = aⁿ/bⁿ"
+  Disp "a⁻ⁿ = 1/aⁿ"
+  Disp "(a⁴)⁸ = a⁴*⁸"
+  Disp "√aⁿ = a^(n/2)"
+EndIf
+
+If keyword="dominio" Then
+  Disp "Denominador: a≠0"
+  Disp "Raiz: a≥0 (índice par)"
+  Disp "Tangente: a≠π/2+kπ, k∈ℤ"
+  Disp "Logaritmo: a>0"
+EndIf
+
+If keyword="prop lim" Then
+  Disp "lim[f(x)+h(x)]=lim[f(x)]+lim[h(x)]"
+  Disp "lim[f(x)-h(x)]=lim[f(x)]-lim[h(x)]"
+  Disp "lim[f(x)*h(x)]=lim[f(x)]*lim[h(x)]"
+  Disp "lim[f(x)/h(x)]=lim[f(x)]/lim[h(x)]"
+  Disp "lim[ⁿ√f(x)] = ⁿ√[lim f(x)], se n par tem que lim f(x)≥0"
+  Disp "lim[f(x)]ⁿ = [lim f(x)]ⁿ"
+  Disp "lim log[f(x)] = log[lim f(x)] para f(x)>0"
+  Disp "lim b^f(x) = b^lim f(x)"
+EndIf
+
+If keyword="lim log" Then
+  Disp "Se a>1:"
+  Disp "lim(+oo) = +oo"
+  Disp "lim(0⁺) = -oo"
+  Disp "Se 0<a<1:"
+  Disp "lim(+oo) = -oo"
+  Disp "lim(0⁺) = +oo"
+EndIf
+
+If keyword="0/a" Then
+  Disp "0"
+EndIf
+
+If keyword="0/+oo" Then
+  Disp "0"
+EndIf
+
+If keyword="0/-oo" Then
+  Disp "0"
+EndIf
+
+If keyword="-a/-oo" Then
+  Disp "0⁺"
+EndIf
+
+If keyword="a/+oo" Then
+  Disp "0⁺"
+EndIf
+
+If keyword="a/-oo" Then
+  Disp "0⁻"
+EndIf
+
+If keyword="-a/+oo" Then
+  Disp "0⁻"
+EndIf
+
+If keyword="-oo/-a" Then
+  Disp "+oo"
+EndIf
+
+If keyword="+oo/a" Then
+  Disp "+oo"
+EndIf
+
+If keyword="-oo/a" Then
+  Disp "-oo"
+EndIf
+
+If keyword="+oo/-a" Then
+  Disp "-oo"
+EndIf
+
+If keyword="-a/0-" Then
+  Disp "+oo"
+EndIf
+
+If keyword="a/0+" Then
+  Disp "+oo"
+EndIf
+
+If keyword="a/0-" Then
+  Disp "-oo"
+EndIf
+
+If keyword="a/0" Then
+  Disp "Procurar se é 0⁻ ou 0⁺"
+EndIf
+
+If keyword="-a/0" Then
+  Disp "Procurar se é 0⁻ ou 0⁺"
+EndIf
+
+If keyword="-a/0+" Then
+  Disp "-oo"
+EndIf
+
+If keyword="+oo/0+" Then
+  Disp "+oo"
+EndIf
+
+If keyword="-oo/0+" Then
+  Disp "-oo"
+EndIf
+
+If keyword="+oo/0-" Then
+  Disp "-oo"
+EndIf
+
+If keyword="-oo/0-" Then
+  Disp "+oo"
+EndIf
+
+If keyword="a*+oo" Then
+  Disp "+oo"
+EndIf
+
+If keyword="a*-oo" Then
+  Disp "-oo"
+EndIf
+
+If keyword="-a*+oo" Then
+  Disp "-oo"
+EndIf
+
+If keyword="-a*-oo" Then
+  Disp "+oo"
+EndIf
+
+If keyword="limites" Then
+  Disp "0/a    0/+oo    0/-oo   -a/-oo   a/+oo"
+  Disp "0       0           0           0⁺          0⁺"
+  Disp " "
+  Disp "a/-oo    -a/+oo    -oo/-a   +oo/a   +oo/-a"
+  Disp "0⁻          0⁻            +oo        +oo      -oo"
+  Disp " "
+  Disp "-a/0-    a/0+    a/0-   -a/0+   +oo/0+"
+  Disp "+oo       +oo     -oo    -oo      +oo"
+  Disp " "
+  Disp "-oo/0+    +oo/0-    -oo/0-   a*+oo   a*-oo"
+  Disp "-oo         -oo          +oo       +oo       -oo"
+  Disp " "
+  Disp "-a*+oo   -a*-oo"
+  Disp "-oo         +oo"
+  Disp " "
+EndIf
+
+If keyword="a^+oo" Then
+  Disp "Se a>1"
+  Disp "+oo"
+  Disp "Se 0<a<1"
+  Disp "0⁺"
+EndIf
+
+If keyword="a^-oo" Then
+  Disp "Se a>1"
+  Disp "0"
+  Disp "Se 0<a<1"
+  Disp "+oo"
+EndIf
+
+If keyword="ind" Then
+  Disp "Indeterminações:"
+  Disp "+oo-oo"
+  Disp "oo/oo"
+  Disp "0*oo"
+  Disp "0/0"
+  Disp "1⁺∞"
+EndIf
+
+If keyword="+oo-oo" Then
+  Disp "Dicas:"
+  Disp "Polinómios:"
+  Disp "Colocar em evidência o termo de maior grau."
+  Disp "Raízes:"
+  Disp "Multiplicar/dividir pelo conjugado ou colocar em evidência."
+EndIf
+
+If keyword="heine" Then
+  Disp "lim x->a f(x)=b"
+  Disp "u->a => f(u)->b"
+EndIf
+
+If keyword="-oo+oo" Then
+  Disp "Dicas:"
+  Disp "Polinómios:"
+  Disp "Colocar em evidência o termo de maior grau."
+  Disp "Raízes:"
+  Disp "Multiplicar/dividir pelo conjugado ou colocar em evidência."
+EndIf
+
+If keyword="oo/oo" Then
+  Disp "Dicas:"
+  Disp "Polinómios:"
+  Disp "Colocar em evidência o termo de maior grau."
+  Disp "Raízes:"
+  Disp "Multiplicar/dividir pelo conjugado ou colocar em evidência."
+EndIf
+
+If keyword="0*oo" Then
+  Disp "Tranformar nume inderterminação oo/oo"
+EndIf
+
+If keyword="0/0" Then
+  Disp "Dicas:"
+  Disp "Polinómios:"
+  Disp "Fatorizar numerador e denominador (casos notáveis, regra de Ruffini)."
+  Disp "Raízes:"
+  Disp "Multiplicar pelo conjugado."
+EndIf
+
+If keyword="1^+oo" Then
+  Disp "Recorrer ao limite:"
+  Disp "limimite quando n-> +oo (1 + x/n)ⁿ"
+EndIf
+
+If keyword="cont" Then
+  Disp "lim x->a⁺ f(x) = lim x->a⁻ f(x) = f(a)"
+EndIf
+
+If keyword="ass" Then
+  Disp "Assíntotas verticais:"
+  Disp "lim x->a⁺ f(x)=±oo  |  lim x->a⁻ f(x)=±oo"
+  Disp "Assíntotas não verticais:"
+  Disp "m = lim x->±oo [f(x)/x]"
+  Disp "b = lim x->±oo [f(x) - mx]"
+  Disp "Se m=±oo ou b=±oo não existe ass. vertical"
+  Disp "Se m=0 e b existe então y=b é ass. horizontal"
+  Disp "Se m≠0 e b existe então y=mx+b é ass. oblíqua"
+EndIf
+
+If keyword="casos" Then
+  Disp "(a+b)² = a²+2ab+b²"
+  Disp "(a-b)² = a²-2ab+b²"
+  Disp "a²-b² = (a-b)*(a+b)"
+EndIf
+
+If keyword="tmv" Then
+  Disp "Taxa média de variação:"
+  Disp "t.m.v. = f(b)-f(a) / b-a"
+EndIf
+
+If keyword="derivada ponto" Then
+  Disp "f'(x₀) = lim x->x₀ [f(x)-f(x₀)/x-x₀]"
+  Disp "Mudança de variável: x-x₀=h"
+  Disp "f'(x₀) = lim h->0 [f(x₀+h)-f(x₀)/h]"
+EndIf
+
+If keyword="mono" Then
+  Disp "Sucessão crecente:"
+  Disp "u₊₁>u <-logo-> u₊₁-u>0"
+  Disp "Sucessão decrescente:"
+  Disp "u₊₁<u <-logo-> u₊₁-u<0"
+EndIf
+
+If keyword="limitada" Then
+  Disp "a ≤ u ≤ b"
+EndIf
+
+If keyword="prog arit" Then
+  Disp "Razão: r = u₊₁-u"
+  Disp "Termo geral: u = uk+(n-k)*r (r=razão)"
+  Disp "Soma dos n primeiros termos: S=(u₁+u/2)*n"
+EndIf
+
+If keyword="prog geo" Then
+  Disp "Razão: r = u₊₁/u"
+  Disp "Termo geral: u = uk*r^n-k (r=razão)"
+  Disp "Soma dos n primeiros termos: S=u₁*(1-rⁿ/1-r), n≠1"
+EndIf
+
+If keyword="sucessao inf" Then
+  Disp "Infinitamente grande positivo:"
+  Disp "u->+oo"
+  Disp "Infinitamente grande negativo:"
+  Disp "u->-oo <-> -u->+oo"
+  Disp "Infinitamente pequeno (infinitésimos):"
+  Disp "u->0"
+  Disp "Convergência:"
+  Disp "u->k <-> u-k ->0"
+  Disp "Toda a sucessão monótona e limitada é convergente"
+  Disp "Toda a sucessão convergente é limitada"
+EndIf
+
+If keyword="juro" Then
+  Disp "Procurar por ""´juro simples"" ou por ""juro composto"""
+EndIf
+
+If keyword="juro simples" Then
+  Disp "C = C * (1+k*n)  C: Capital Acumulado"
+  Disp "                              C: Capital Inicial"
+  Disp "                              n: Anos"
+  Disp "                              k: Taxa de Juro Anual"
+EndIf
+
+If keyword="juro composto" Then
+  Disp "C = C*(1+k)ⁿ  C: Capital Acumulado"
+  Disp "                         C: Capital Inicial"
+  Disp "                          n: Anos"
+  Disp "                          k: Taxa de Juro Anual"
+EndIf
+
+If keyword="arranjos" Then
+  Disp "Interessa a ordem?; Há repetição?"
+  Disp "Permutação: P = n! (Sim;Não)"
+  Disp "Arranjo com repetição: ⁿA'p = n^p (Sim;Sim)"
+  Disp "Arranjo sem repetição: ⁿAp = n!/(n-p)! (Sim;Não)"
+  Disp "Combinações: ⁿCp = n!/(n-p)!*p! (Sim;Não)"
+EndIf
+
+If keyword="form pascal" Then
+  Disp "Simetria: ⁿCp = ⁿC(-p)"
+  Disp "Soma de elementos seguidos: ⁿCp+ⁿC(p+1) = ⁿ⁺¹C(p+1)"
+EndIf
+
+If keyword="pascal" Then
+  Disp "            ⁰C₀                           1"
+  Disp "         ¹C₀  ¹C₁                     1   1"
+  Disp "      ²C₀  ²C₁  ²C₂               1   2    1"
+  Disp "   ³C₀  ³C₁  ³C₂  ³C₃         1   3   3   1"
+  Disp "⁴C₀  ⁴C₁  ⁴C₂  ⁴C₃  ⁴C₄   1   4   6   4   1"
+EndIf
+
+If keyword="newton" Then
+  Disp "(a+b)ⁿ=ⁿC₀aⁿb⁰+ⁿC₁aⁿ⁻¹b¹+...+ⁿC₋₁a¹bⁿ⁻¹+ⁿCa⁰bⁿ"
+  Disp "(a+b)ⁿ=∑(p=0)^n*ⁿCp*a^(n-p)*b^p"
+  Disp "Termo Geral: T(p+1 em baixo) = ⁿCp*a^(n-p)*b^p"
+EndIf
+
+If keyword="prob" Then
+  Disp "A∪(B∩C)=(A∪B)∩(A∩C)"
+  Disp "P(A∪E)=P(A)+P(E) se A∩E = ∅"
+  Disp "P(A∪Ā)=P(A)+P(Ā)=1"
+  Disp "P(A)=1-P(Ā)"
+  Disp "P(A∩Ē)=P(A)-P(A∩E)"
+  Disp "P(A∪E)=P(A)+P(E)-P(A∩E)"
+  Disp "P(A)=P(A∩Ē)+P(A∩E)"
+  Disp "A∪E(com o risco em cima)=Ā∩Ē"
+  Disp "A∩E(com o risco em cima)=Ā∪Ē"
+  Disp "P(A|E)=P(A∩E)/P(E)"
+EndIf
+
+If keyword="inde" Then
+  Disp "A e B são acontecimentos independentes"
+  Disp "P(A∩B) = P(A)*P(B)"
+  Disp "P(A|B) = P(A)"
+EndIf
+
+If keyword="incom" Then
+  Disp "A e B são acontecimentos incompatíveis"
+  Disp "A∩B = ∅ ⇔ P(A∩B) = 0"
+EndIf
+
+If keyword="equi" Then
+  Disp "A e B são acontecimentos equiprováveis"
+  Disp "P(A)=P(B)"
+EndIf
+
+If keyword="laplace" Then
+  Disp "P(A|E)=#(A∩E)/#(E)"
+EndIf
+
+If keyword="resolvente" Then
+  Disp "x=(-b±√b²-4ac)/2a"
+EndIf
+
+If keyword="tabela" Then
+  Disp "     |       E       |       Ē       |"
+  Disp "A  |  P(A∩E)  |  P(A∩Ē)  |  P(A)"
+  Disp "Ā  |  P(Ā∩E)  |  P(Ā∩Ē)  |  P(Ā)"
+  Disp "     |     P(E)    |      P(Ē)    |  1"
+EndIf
+
+If keyword="arvore" Then
+  Disp "       0.7=>P(E|A)"
+  Disp "     A-E=>P(E∩A)=0.14\"
+  Disp "0.2/ \                                \"
+  Disp "    /   \0.3=>P(Ē|A)             \P(E)=0.62"
+  Disp "  /      \Ē=>P(Ē∩A)=0.06\   /  "
+  Disp "/                                       \ /   "
+  Disp "\                                       / \ "
+  Disp "  \      /E=>P(E∩Ā)=0.48/    \   "
+  Disp "    \   /0.6=>P(E|Ā)              /P(Ē)=0.38"
+  Disp "0.8\ /                                 / "
+  Disp "     Ā-Ē=>P(Ē∩Ā)=0.32/"
+  Disp "       0.4=>P(Ē|Ā)"
+EndIf
+
+If keyword="alg-trig" Then
+  Disp "Z=a+b"
+  Disp "r²=a²+b²<=>r=√a²+b²"
+  Disp "tan(θ)=b/a, se P pertencer ao 2ºQ ou 3ºQ adicionar +π"
+  Disp "Z=r^θ"
+EndIf
+
+If keyword="trig-alg" Then
+  Disp "Z=r^θ"
+  Disp "Z=r(cos(θ)+sen(θ))"
+  Disp "a=r*cos(θ)"
+  Disp "b=r*sen(θ)*"
+  Disp "Z=r*cos(θ)+r*sen(θ)*"
+  Disp "Z=a+b"
+EndIf
+
+If keyword="complexos" Then
+  Disp "Adição"
+  Disp "Alg: Z₁±Z₂=(a±c)+(b±d) Trig:---"
+  Disp "Multiplicação"
+  Disp "Alg: Z₁*Z₂=(a+b)(c+d) Trig: Z₁*Z₂=(r₁*r₂)^(θ₁+θ₂)"
+  Disp "Divisão:"
+  Disp "Alg: Z₁/Z₂=a+b/+c+d (conj.) Trig: Z₁/Z₂= (r₁/r₂)^(θ₁-θ₂)"
+  Disp "Potência:"
+  Disp "Alg: Zⁿ=(a+b)ⁿ Trig: Zⁿ=rⁿ^(ⁿθ)"
+EndIf
+
+If keyword="conjugado" Then
+  Disp "Algébrica:"
+  Disp "Z=a+b->Z=a-b"
+  Disp "Trignométrica"
+  Disp "r^θ->r^-θ"
+EndIf
+
+If keyword="simetrico" Then
+  Disp "-z = -a-bi"
+EndIf
+
+If keyword="plano complexo" Then
+  Disp "Circunferência de centro (a,b) e raio r:"
+  Disp "|Z-(a+bi)|=r"
+  Disp " "
+  Disp "Mediatriz de seg de reta que une (a,b) e (c,d):"
+  Disp "|Z-(a+bi)| = |Z-(c+di)|"
+  Disp " "
+  Disp "Reta vertical x=a+k:"
+  Disp "Re(Z-(a+bi))=k"
+  Disp " "
+  Disp "Reta horizontal y=b+k:"
+  Disp "Im(Z-(a+bi))=k"
+  Disp " "
+  Disp "Semirreta de origem (a,b) e inclinação α:"
+  Disp "arg(Z-(a+bi))=α"
+EndIf
+
+If keyword="hp geo" Then
+  Disp "Geometria:"
+  Disp "ang vet | area | circulo | circun(ferencia) | declive | distancia pontos | elipse | euler | norma | perimetro | plano mediador | ponto medio | produto escalar | reta | volume"
+EndIf
+
+If keyword="hp trig" Then
+  Disp "Trigonometria:"
+  Disp "circ trig | equacao trig | form trig | leis | reducao"
+EndIf
+
+If keyword="hp fun" Then
+  Disp "Funções:"
+  Disp "ass | casos | cont | derivada ponto | dominio | ind | injetiva | heine | lim log | limites | log | operacao funcoes | paridade | prop lim | prop log | prop pot(encias) | resolvente | ruff(ini) | tmv"
+EndIf
+
+If keyword="hp suc" Then
+  Disp "Sucessões:"
+  Disp "juro | juro composto | juro simples | limitada | mono | prog arit | prog geo | sucessao inf"
+EndIf
+
+If keyword="hp prob" Then
+  Disp "Probabilidade e Cálculo Combinatório:"
+  Disp "arranjos | arvore | equi(provaveis) | form pascal | incom(pativeis) | inde(pendente) | laplace | newton | pascal | prob(abilidades) | tabela"
+EndIf
+
+If keyword="hp com" Then
+  Disp "Números Complexos:"
+  Disp "alg-trig | trig-alg | complexos | conjugado | plano complexo | simetrico"
+EndIf
+
+If keyword="hp" Then
+  Disp "hp geo"
+  Disp "hp trig"
+  Disp "hp fun"
+  Disp "hp suc"
+  Disp "hp prob"
+  Disp "hp com"
+EndIf
+
+If keyword="help" Then
+  Disp "ang vet | area | circulo | circun(ferencia) | declive | distancia pontos | elipse | euler | norma | perimetro | plano mediador | ponto medio | produto escalar | reta | volume | circ trig | equacao trig | form trig | leis | reducao | ass | casos | cont | derivada ponto | dominio | ind | injetiva | heine | lim log | limites | log | operacao funcoes | paridade | prop lim | prop log | prop pot(encias) | resolvente | ruff(ini) | tmv | juro | juro composto | juro simples | limitada | mono | prog arit | prog geo | sucessao inf | arranjos | arvore | equi(provaveis) | form pascal | incom(pativeis) | inde(pendente) | laplace | newton | pascal | prob(abilidades) | tabela | alg-trig | trig-alg | complexos | conjugado | plano complexo | simetrico"
+EndIf
+EndPrgm
